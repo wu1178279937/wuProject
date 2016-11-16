@@ -28,16 +28,12 @@ android {
         versionName APP_VERSION
         resValue("string", 'app_version', APP_VERSION)
         buildConfigField "boolean", "LEO_DEBUG", "true"
-        buildConfigField 'String', 'API_SERVER_URL', RELEASE_API_SERVER_URL
-        buildConfigField 'String', 'API_SERVER_URL_MALL', RELEASE_API_SERVER_URL_MALL
+
         signingConfig signingConfigs.signingConfig
     }
     buildTypes {
         release {
-            buildConfigField 'String', 'API_SERVER_URL', RELEASE_API_SERVER_URL
-            buildConfigField 'String', 'API_SERVER_URL_MALL', RELEASE_API_SERVER_URL_MALL
-            buildConfigField 'String', 'IM_SERVER_HOST', RELEASE_IM_SERVER_HOST
-            buildConfigField 'int', 'IM_SERVER_PORT', RELEASE_IM_SERVER_PORT
+
             buildConfigField "boolean", "LEO_DEBUG", RELEASE_LEO_DEBUG
             minifyEnabled true
             zipAlignEnabled true
@@ -45,10 +41,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            buildConfigField 'String', 'API_SERVER_URL', RELEASE_API_SERVER_URL
-            buildConfigField 'String', 'API_SERVER_URL_MALL', RELEASE_API_SERVER_URL_MALL
-            buildConfigField 'String', 'IM_SERVER_HOST', RELEASE_IM_SERVER_HOST
-            buildConfigField 'int', 'IM_SERVER_PORT', RELEASE_IM_SERVER_PORT
+
             buildConfigField "boolean", "LEO_DEBUG", RELEASE_LEO_DEBUG
         }
     }
