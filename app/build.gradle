@@ -48,6 +48,10 @@ android {
     dexOptions {
         javaMaxHeapSize "2g"
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
 
 
     //渠道Flavors，我这里写了一些常用的
