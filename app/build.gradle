@@ -73,7 +73,7 @@ android {
             def oldFile = output.outputFile
             def outDirectory = oldFile.parent
 
-            if ("true".equals(IS_JENKINS)) {
+            if (IS_JENKINS) {
                 timeNow = JENKINS_TIME
                 outDirectory = 'E:\\apk'
                 newName = APP_NAME +
@@ -83,7 +83,7 @@ android {
                 if (variant.buildType.name.equals('debug')) {
                     newName = APP_NAME+"-v${APP_VERSION}-debug.apk"
                 } else {
-                    newName = APP_NAME +"_"
+                    newName = APP_NAME+
                             APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
                 }
             }
