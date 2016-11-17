@@ -40,6 +40,7 @@
         </service>
 
         <activity android:name=".ui.SecondActivity"></activity>
+
     </application>
 
 </manifest>
