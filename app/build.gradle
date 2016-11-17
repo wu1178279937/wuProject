@@ -75,15 +75,15 @@ android {
 
             if ("true".equals(IS_JENKINS)) {
                 timeNow = JENKINS_TIME
-                outDirectory = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 8.0\\webapps\\apk'
-                newName = 'yj-android-v' +
+                outDirectory = 'E:\\apk'
+                newName = APP_NAME +
                         APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
             } else {
                 timeNow = getDate()
                 if (variant.buildType.name.equals('debug')) {
-                    newName = "yj-android-v${APP_VERSION}-debug.apk"
+                    newName = APP_NAME+"-v${APP_VERSION}-debug.apk"
                 } else {
-                    newName = 'yj-android-v' +
+                    newName = APP_NAME +"_"
                             APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
                 }
             }
