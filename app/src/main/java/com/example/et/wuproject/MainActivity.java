@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
           registerReceiver(recevive,intentFilter);
         TextView textView=new TextView(this);
               textView.setText("adb");
+              textView.animate().alpha(0.5f);
+
 
 
 
