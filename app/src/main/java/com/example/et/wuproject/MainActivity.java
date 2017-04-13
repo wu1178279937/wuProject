@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.et.wuproject.ui.SecondActivity;
@@ -43,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
         IntentFilter intentFilter=new IntentFilter();
           intentFilter.addAction(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
           intentFilter.addAction(DownloadManager.ACTION_NOTIFICATION_CLICKED);
-         registerReceiver(recevive,intentFilter);
+          registerReceiver(recevive,intentFilter);
+        TextView textView=new TextView(this);
+              textView.setText("adb");
 
 
 
